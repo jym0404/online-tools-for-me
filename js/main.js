@@ -130,9 +130,14 @@
         }
       };
     }
-
+    var oti = function() {
+      document.getElementById('input').value = document.getElementById('output').value
+      if(checkbox[0].checked) {
+        execute()
+      }
+    }
     $('#execute').click(execute);
-
+    $("#outtoin").click(oti);
     var parts = location.pathname.split('/');
     $('a[href="' + parts[parts.length - 1] + '"]').addClass('active');
   });
